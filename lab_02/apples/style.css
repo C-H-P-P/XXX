@@ -1,0 +1,145 @@
+/* GENERAL STYLES */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 100;
+    background-color: #f2f2f2;
+    
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.but1{
+    margin: 100px;
+        align-items: center;
+        text-align: center;
+        .biton {
+           width: 300px;
+           height: 100px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid rgb(255, 255, 255);
+
+            background-color:rgba(0, 0, 0, 0.5);
+            color: rgb(206, 206, 206);
+        }
+ }
+
+ p{
+    justify-content:center;
+    display: flex;
+    padding: 20px;
+ }
+
+
+
+header {
+    background: url('apples.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    top: -100px;
+    
+
+    
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: -50px ;
+    margin: 100px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: -180px;
+    margin-left: -50px;
+    
+}
+
+.dina1{
+    display: flex;
+    justify-content:center;
+    color: rgb(255, 255, 255);
+    margin: 100px;
+    font-size: 50px;
+    text-decoration: none;
+    
+}
+
+nav ul li a {
+    color: white;
+  
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 1px;
+    
+    
+}
+.span{
+    position: relative;
+    right: 700px;
+    
+
+}
+
+/* HERO SECTION STYLES */
+.article.bbb{
+    text-align: right;
+}
+
+.left-image {
+    background-image: url(" C:/Users/lensa/Documents/ІЗРАЇЛЬ/CSS/lesson/Нова папка/sample3.jpg");
+    width: 70%;
+   position: relative;
+
+}
+.flex-article {
+   display: flex; 
+}
+.article-content-new {
+    width: 30%;
+}
+
+.likes {
+    position:absolute ;
+    right: 100px;
+}
+.likes2{
+    position:absolute ;
+    right: 780px;
+}
+
+
+.left-image h3 {
+    position: absolute;
+    top: 90%
+}
+.rrr{
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+
+}
+.reverce{
+    flex-direction: row-reverse;
+}

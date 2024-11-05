@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея картинок</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="info" id="info-box"> 
+        <p id="info-text"></p> 
+        <button onclick="hideInfo()">Закрити</button> 
+    </div>
+
+
+    <h1>Галерея картинок</h1>
+    <div class="gallery">
+        <img src="img/kravchuk_13.jpg" alt="Картинка 1" onclick="showInfo('kravchuk')">
+        <img src="img/Leonid_Kuchma.jpg" alt="Картинка 2" onclick="showInfo('kuchma')">
+        <img src="img/Портрет_3-го_президента_України_Віктора_Ющенка.jpeg" alt="Картинка 3" onclick="showInfo('uchenko')">
+        <img src="img/yanukovich-prezident.jpg" alt="Картинка 4" onclick="showInfo('yanik')">
+        <img src="img/159018-1_large.jpg" alt="Картинка 5" onclick="showInfo('poroshenko')">
+        <img src="img/8186a7b-zelenskyj.jpg" alt="Картинка 6" onclick="showInfo('zelenskiu')">
+    </div>
+
+   
+</body>
+</html>

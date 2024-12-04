@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Job Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Job Filter</h1>
+
+   
+    <div class="tags">
+        <span onclick="addTag('junior')">junior</span>
+        <span onclick="addTag('middle')">middle</span>
+        <span onclick="addTag('senior')">senior</span>
+        <span onclick="addTag('frontend')">frontend</span>
+        <span onclick="addTag('backend')">backend</span>
+    </div>
+
+    <div class="jobs">
+        <div class="job" data-tags="junior frontend">
+            <h3>Junior Frontend Developer</h3>
+        </div>
+        <div class="job" data-tags="middle backend">
+            <h3>Middle Backend Developer</h3>
+        </div>
+        <div class="job" data-tags="senior fullstack">
+            <h3>Senior Fullstack Developer</h3>
+        </div>
+        <div class="job" data-tags="junior backend">
+            <h3>Junior Backend Developer</h3>
+        </div>
+        <div class="job" data-tags="middle frontend">
+            <h3>Middle Frontend Developer</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

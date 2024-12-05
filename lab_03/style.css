@@ -1,14 +1,12 @@
-body{
-    background-color:#0a1223;
+body {
+    background-color: #0a1223;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px 100px 0 100px;
-
+    margin: 0 100px;
 }
+
 nav {
-    margin: 20px;
+    margin: 20px 0;
     float: right;
-    margin: 0;
-    padding: 7px;
     height: 20px;
     line-height: 20px;
 }
@@ -17,9 +15,9 @@ nav ul li {
     display: inline-block;
 }
 
-nav ul li a{
+nav ul li a {
     color: #5d5d5d;
-    padding: 5px 7px 10px 7px;
+    padding: 5px 7px;
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -30,7 +28,7 @@ nav ul li a:hover {
     color: #54597d;
 }
 
-h1{
+h1 {
     font-size: 75px;
     text-align: center;
     padding: 250px 0 0 0;
@@ -38,11 +36,11 @@ h1{
     width: auto;
     color: rgb(0, 0, 0);
     background: linear-gradient(to right, rgb(0, 0, 0), rgb(43, 43, 43));
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-h2{
+h2 {
     font-size: 25px;
     text-align: left;
     color: rgb(0, 0, 0);
@@ -59,4 +57,39 @@ h2{
 
 .reverse {
     flex-direction: row-reverse;
+}
+
+img {
+    max-width: 800px;
+    max-height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+    
+    h1 {
+        font-size: 50px;
+        padding: 150px 0 0 0;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }

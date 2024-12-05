@@ -1,24 +1,36 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Simple File Manager</title> 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head> 
-<body> 
-    <h1>File Manager</h1> 
-    <button onclick="showCategory('Documents')">Documents</button>
-
-    <button onclick="showCategory('Files')">Files</button>
-
-    <button onclick="showCategory('Photos')">Photos</button>
-
-
-    <input type="file" id="fileInput" multiple> 
-    <button onclick="uploadFiles()">Upload</button> 
-    <div id="fileList"></div> 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-</body> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ul>
+        <li class="directory">📁 Папка
+            <ul class="directory-content">
+                <li>🖼️ фоткі</li>
+                <li class="directory">📁 Папка в папці
+                    <ul class="directory-content">
+                        <li>🗃️ Важливі файли</li>
+                        <li class="directory">📁 Третя Папка
+                            <ul class="directory-content">
+                                <li>(пусто)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="directory">📁 Доки
+            <ul class="directory-content">
+                <li>💦 Пусто</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="script.js"></script>
+</body>
 </html>

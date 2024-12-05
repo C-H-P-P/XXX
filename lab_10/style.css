@@ -1,12 +1,10 @@
+.gallery img {
+    width: 200px; 
+    height: 250px;
+    margin: 0px; 
+    cursor: pointer; 
+}
 
-    .gallery img {
-        width: 200px; 
-        height:250px;
-        margin: 0px; 
-        cursor: pointer; 
-    
-    }
-    .gallery img:hover {
-        border-color: #007bff; 
-    }
-
+.gallery img:hover {
+    border-color: #007bff; 
+}

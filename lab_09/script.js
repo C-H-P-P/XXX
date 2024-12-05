@@ -1,52 +1,98 @@
-const symbols = ['🎃', '🥵', '❤️‍🔥', '🫥', '😶‍🌫️', '🫠'];
-let shuffledCards = [...symbols, ...symbols].sort(() => Math.random() - 0.5);
+const cards = [
+    '🎃', '🎃',  '🥵', '🥵',  '❤️‍🔥', '❤️‍🔥',  '🫥', '🫥',   '😶‍🌫️', '😶‍🌫️',  '🫠', '🫠'
+];
 
-const board = document.getElementById('grid');
-let CardOne = null;
-let pairsMatched = 0;
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let stepCount = 0;
 
-function card() {
-    shuffledCards.forEach((symbol) => {
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {               // перемішка
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
+function createBoard() {
+    const gameBoard = document.querySelector('.grid'); // дошка
+    gameBoard.innerHTML = ''; // очист.дошк
+    const pairCount = 6; 
+
+    
+    const selectedCards = cards.slice(0, pairCount * 2);
+    shuffle(selectedCards);
+
+    selectedCards.forEach(card => {
         const cardElement = document.createElement('div');
-        cardElement.classList.add('card', 'hidden');
-        cardElement.dataset.symbol = symbol;
-        cardElement.addEventListener('click', revealCard);
-        board.appendChild(cardElement);
+        cardElement.classList.add('card');
+        cardElement.dataset.icon = card;
+        cardElement.addEventListener('click', flipCard);
+        gameBoard.appendChild(cardElement);
     });
 }
 
-function revealCard() {
-    if (this === CardOne  || this.classList.contains('revealed')) return;
 
-    this.classList.remove('hidden');
-    this.classList.add('revealed');
-    this.textContent = this.dataset.symbol;
+function flipCard() {
+    if (lockBoard) return; //блок.дошки 
+    if (this === firstCard) return; // без змін, та сама 
 
-    if (!CardOne ) {
-        CardOne  = this;
+    this.classList.add('flipped');
+    this.textContent = this.dataset.icon; // вивід св
+
+    if (!firstCard) {
+        firstCard = this;
+        return;
+    }
+
+    secondCard = this;
+    checkForMatch();
+}
+
+
+function checkForMatch() {
+    stepCount++;
+    document.getElementById('step-counter').textContent = `Кроки: ${stepCount}`;       //перевірка на збіг
+
+    if (firstCard.dataset.icon === secondCard.dataset.icon) {
+        disableCards();
     } else {
-        evaluateMatch(this);
+        unflipCards();
     }
 }
 
-function evaluateMatch(secondFlippedCard) {
-    if (CardOne .dataset.symbol === secondFlippedCard.dataset.symbol) {
-        pairsMatched += 2;
-        if (pairsMatched === shuffledCards.length) {
-            setTimeout(() => alert('Win!'), 500);
-        }
-        CardOne  = null;
-    } else {
-        setTimeout(() => {
-            CardOne .classList.add('hidden');
-            secondFlippedCard.classList.add('hidden');
-            CardOne .textContent = '';
-            secondFlippedCard.textContent = '';
-            CardOne .classList.remove('revealed');
-            secondFlippedCard.classList.remove('revealed');
-            CardOne  = null;
-        }, 1000);
-    }
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard); // видалення
+    resetBoard();
 }
 
-card();
+
+function unflipCards() {
+    lockBoard = true;              //назад
+    setTimeout(() => {
+        firstCard.classList.remove('flipped');
+        secondCard.classList.remove('flipped');
+        firstCard.textContent = '';
+        secondCard.textContent = '';
+        resetBoard();
+    }, 1000); // затримка
+}
+
+
+function resetBoard() {
+    [firstCard, secondCard, lockBoard] = [null, null, false]; // очист
+}
+
+
+document.getElementById('reset-button').addEventListener('click', () => {
+    createBoard();
+    stepCount = 0;
+    document.getElementById('step-counter').textContent = `Кроки: ${stepCount}`;
+});
+
+
+createBoard();

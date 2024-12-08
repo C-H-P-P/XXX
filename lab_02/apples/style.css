@@ -143,3 +143,44 @@ nav li {
 .reverce{
     flex-direction: row-reverse;
 }
+
+
+
+
+
+
+.form-news {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    padding: 40px;
+    margin-top: -30px;
+   
+}
+
+.form-news p {
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.in {
+    width: 700px;
+    height: 50px;
+}
+
+label {
+    line-height: 0;
+    height: 50px;
+}
+
+.button2 {
+    width: 100px;
+    height: 56px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(206, 206, 206);
+}

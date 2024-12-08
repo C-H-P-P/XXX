@@ -28,18 +28,42 @@ body{
 }
 
 h1{
-    margin: 0;
+    margin-right:230px;
     text-align: end;
-    padding-top: 42px;
+    padding-top: 22px;
     font-size: 35px;
 }
-nav{
-    background: url(images/header-page.jpg)no-repeat;
+nav {
+    background: url(images/header-page.jpg) no-repeat;
     background-size: 100%;
     width: 50%;
     height: 33px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: background-color 0.3s;
+    background-color: rgb(170, 29, 29);
+}
+
+nav ul {
+    margin: 0;
+    padding: 10;
+}
+
+
+nav a {
+    padding: 10px 20px; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    display: block; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(37, 242, 88, 0.8); 
+    color: #fff;
+}
     li{
         display: inline-block; 
 
@@ -49,7 +73,7 @@ nav{
         padding-right: 35px;
         color: #fff;
     }
-}
+
 ul{
 
 

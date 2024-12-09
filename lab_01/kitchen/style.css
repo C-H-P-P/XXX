@@ -1,80 +1,73 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 body {
     background: url(images/dark-wood.jpg);
-    font-family: 'Dancing Script', cursive; 
+    font-family: 'Lato', sans-serif;  
     font-size: 14px;
-    text-decoration-color: #333333;
-    margin: 0px;
+    margin: 0;
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: url(images/header-page.jpg) no-repeat;
+    background-size: cover;
+    height: 130px;
+    width: 50%;
 }
 
 h1 {
-    margin-right: 230px;
+    padding-right: 30px;
+    margin: 0;
     text-align: end;
-    padding-top: 22px;
+    padding-top: 42px;
     font-size: 75px;
-    margin-top: -15px;
 }
 
-
 nav {
+    display: flex;
+    align-items: center;
     background: url(images/header-page.jpg) no-repeat;
     background-size: 100%;
     width: 50%;
     height: 33px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transition: background-color 0.3s;
     background-color: rgb(170, 29, 29);
 }
 
 nav ul {
     margin: 0;
-    padding: 10;
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 nav a {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
-    display: block; 
+    display: block;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: rgba(37, 242, 88, 0.8); 
+    background-color: rgba(37, 242, 88, 0.8);
     color: #fff;
-}
-
-li {
-    display: inline-block;
-}
-
-a {
-    padding-right: 35px;
-    color: #fff;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
 }
 
 main {
     background-color: #fff;
     width: 77%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 figure {
@@ -83,18 +76,17 @@ figure {
     border-width: 1px;
     padding: 5px;
     margin: 10px;
-    float: left;
-}
-
-main article:after {
-    content: '';
-    display: block;
-    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 article {
     display: flex;
+    flex-direction: column;
     padding: 10px;
+    width: 48%;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -102,7 +94,7 @@ footer {
     color: #fff;
     text-align: center;
     background-color: #b4a6a6f5;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
 }
 
 .popular-recipes {
@@ -127,13 +119,20 @@ aside a {
 
 h2 {
     font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;  
+    color: #333;
 }
 
 h3 {
     color: #dacd1a;
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 p {
     font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: #666;  
 }

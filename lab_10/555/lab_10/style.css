@@ -1,0 +1,29 @@
+body{
+    background: green;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+.info-container{
+    display: flex;
+    justify-content: center;
+}
+.tank{
+    background: wheat;
+    width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        padding: 10px;
+        width: 80%;
+        height: 80%;
+    }
+    h1{
+        color: rgb(43, 32, 32);
+        margin: 0;
+    }
+}

@@ -1,13 +1,22 @@
 body {
     background: linear-gradient(to bottom, #ffdd9f, #0d0f0d);
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .data-container, .info-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
     gap: 40px;
     padding: 20px;
     justify-items: center;
+    overflow-x: auto;
+    margin: 20px;
 }
 
 .hidden {
@@ -15,20 +24,19 @@ body {
 }
 
 .card-box {
-    background: #ffdd9f;
+    background: none;
     width: 200px;
-    border-radius: 102px;
-    padding: 35px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     cursor: pointer;
+    border: none;
 }
 
 .card-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 12px #ed0505c9;
-    background-color: #011112;
 }
 
 .card-box h1 {
@@ -53,4 +61,3 @@ body {
     color: #f01414;
     margin: 0;
 }
-

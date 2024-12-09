@@ -61,3 +61,20 @@ body {
     color: #f01414;
     margin: 0;
 }
+
+
+.back-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f01414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #c00d0d;
+}

@@ -1,138 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-body {
+body{
     background: url(images/dark-wood.jpg);
-    font-family: 'Lato', sans-serif;  
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
-    margin: 0;
+    text-decoration-color: #333333;
+    margin: 0px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
-
-header {
+header{
     background: url(images/header-page.jpg) no-repeat;
-    background-size: cover;
+    background-size: 100%;
     height: 130px;
     width: 50%;
 }
-
-h1 {
-    padding-right: 30px;
+h1{
     margin: 0;
     text-align: end;
     padding-top: 42px;
-    font-size: 75px;
+    font-size: 35px;
 }
-
-nav {
-    display: flex;
-    align-items: center;
+nav{
     background: url(images/header-page.jpg) no-repeat;
     background-size: 100%;
     width: 50%;
     height: 33px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(170, 29, 29);
 }
-
-nav ul {
-    margin: 0;
-    padding: 10px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+nav li{
+    display: inline-block;
 }
-
-nav a {
-    padding: 10px 20px;
+nav a{
+    padding-right: 35px;
     color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+a{
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
 }
-
-nav a:hover {
-    background-color: rgba(37, 242, 88, 0.8);
-    color: #fff;
-}
-
-main {
+main{
     background-color: #fff;
-    width: 77%;
+    width: 57%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
-
-figure {
+.course-container article{
+    display: flex;
+    padding: 10px;
+}
+main article:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+figure{
     border-color: #796969;
     border-style: solid;
     border-width: 1px;
     padding: 5px;
     margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    float: left;
 }
-
-article {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 48%;
-    margin-bottom: 20px;
-}
-
-footer {
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    background-color: #b4a6a6f5;
-    padding: 20px 0;
-}
-
-.popular-recipes {
-    padding-top: 10px;
-}
-
-aside h2 {
+.trending-recipes h2{
     padding-bottom: 150px;
     margin-left: 20px;
     color: #c92caf;
 }
-
-aside li {
+.trending-recipes li{
     font-size: 20px;
     margin-bottom: 30px;
     text-decoration: none;
 }
-
-aside a {
+.trending-recipes a{
     color: #c92caf;
 }
-
-h2 {
+h2{
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;  
-    color: #333;
 }
-
-h3 {
+h3{
     color: #dacd1a;
     font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
 }
-
-p {
+p{
     font-size: 15px;
-    font-family: 'Lato', sans-serif;
-    color: #666;  
+}
+footer{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #b4a6a6f5;
+    padding: 20px 0 20px 0;
+}
+.popular-recipes{
+    padding-top: 10px;
 }

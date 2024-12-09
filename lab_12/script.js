@@ -32,14 +32,24 @@ function showPokemonInfo(pokemon) {
             <h1>${pokemon.name}</h1>
             <p><strong>Abilities:</strong> ${pokemon.abilities.map(a => a.ability.name).join(", ")}</p>
             <p><strong>Weight:</strong> ${pokemon.weight}</p>
+            <button id="back-button" class="back-button">Back</button>
         </div>
     `;
+
+    const backButton = document.getElementById("back-button");
+    backButton.onclick = () => showPokemonList();
+
     infoContainer.classList.remove("hidden");
     container.classList.add("hidden");
 }
 
+function showPokemonList() {
+    infoContainer.classList.add("hidden");
+    container.classList.remove("hidden");
+}
+
 async function loadPokemons() {
-    const pokemonIds = [1, 4, 7, 25, 39, 94]; 
+    const pokemonIds = [1, 4, 7, 25, 39, 94];
     for (const id of pokemonIds) {
         const pokemon = await fetchPokemon(id);
         if (pokemon) showPokemonCard(pokemon, container);

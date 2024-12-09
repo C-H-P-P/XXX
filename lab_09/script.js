@@ -53,9 +53,7 @@ function flipCard() {
 
 
 function checkForMatch() {
-    stepCount++;
-    document.getElementById('step-counter').textContent = `Кроки: ${stepCount}`;       //перевірка на збіг
-
+          
     if (firstCard.dataset.icon === secondCard.dataset.icon) {
         disableCards();
     } else {
@@ -90,8 +88,8 @@ function resetBoard() {
 
 document.getElementById('reset-button').addEventListener('click', () => {
     createBoard();
-    stepCount = 0;
-    document.getElementById('step-counter').textContent = `Кроки: ${stepCount}`;
+    
+   
 });
 
 

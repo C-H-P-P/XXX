@@ -1,12 +1,10 @@
-let container = document.getElementById("data-container");
-let info_container = document.getElementById("info-container");
+const container = document.getElementById("data-container");
+const infoContainer = document.getElementById("info-container");
 
-async function fetchData(id) {
+async function fetchPokemon(id) {
     try {
-        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
-        if (!response.ok) {
-            throw new Error("Pokémon not found");
-        }
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+        if (!response.ok) throw new Error("Pokémon not found");
         return await response.json();
     } catch (error) {
         console.error(error);
@@ -14,52 +12,38 @@ async function fetchData(id) {
     }
 }
 
-async function show_data(id, loc) {
-    const json = await fetchData(id);
-    if (!json) {
-        return;
-    }
+function showPokemonCard(pokemon, parent) {
+    const card = document.createElement("div");
+    card.className = "card-box";
 
-    let div = document.createElement("div");
-    let img = document.createElement("img");
-    let header = document.createElement("h1");
-    let txt = document.createElement("p");
+    card.innerHTML = `
+        <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+        <h1>${pokemon.name}</h1>
+    `;
 
-    div.classList = "card-box";
-    div.onclick = () => window.location.href = `index-info.html?id=${id}`;
-    img.src = json.sprites.front_default;
-    header.innerText = json.forms[0].name;
+    card.onclick = () => showPokemonInfo(pokemon);
+    parent.appendChild(card);
+}
 
-    if (loc === info_container) {
-        let abilities = json.abilities.map(ability => ability.ability.name).join(", ");
-        txt.innerText = `Abilities: ${abilities}\nWeight: ${json.weight}`;
-    }
-
-    div.append(img);
-    div.append(header);
-    div.append(txt);
-    loc.append(div);
+function showPokemonInfo(pokemon) {
+    infoContainer.innerHTML = `
+        <div class="card-box">
+            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+            <h1>${pokemon.name}</h1>
+            <p><strong>Abilities:</strong> ${pokemon.abilities.map(a => a.ability.name).join(", ")}</p>
+            <p><strong>Weight:</strong> ${pokemon.weight}</p>
+        </div>
+    `;
+    infoContainer.classList.remove("hidden");
+    container.classList.add("hidden");
 }
 
 async function loadPokemons() {
-    if (container) {
-        for (let i = 1; i <= 20; i++) {
-            await show_data(i, container);
-        }
-    }
-}
-
-async function loadPokemonInfo() {
-    if (info_container) {
-        let urlParams = new URLSearchParams(window.location.search);
-        let id = urlParams.get('id');
-        if (id) {
-            await show_data(id, info_container);
-        } else {
-            info_container.innerHTML = "<p>ID не знайдено</p>";
-        }
+    const pokemonIds = [1, 4, 7, 25, 39, 94]; 
+    for (const id of pokemonIds) {
+        const pokemon = await fetchPokemon(id);
+        if (pokemon) showPokemonCard(pokemon, container);
     }
 }
 
 loadPokemons();
-loadPokemonInfo();

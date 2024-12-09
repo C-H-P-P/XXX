@@ -184,3 +184,55 @@ label {
     background-color: rgba(0, 0, 0, 0.5);
     color: rgb(206, 206, 206);
 }
+
+
+/* Оновлення стилів для контактів і іконок */
+footer {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-info h3,
+.social-icons h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.social-icons p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0073e6;
+}
+
+.product-likes .likes {
+    margin: 20px;
+}
+
+.button-like {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.button-like i {
+    margin-right: 5px;
+}
+
+.button-like:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

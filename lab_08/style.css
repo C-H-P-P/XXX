@@ -1,11 +1,15 @@
+.directory {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
-.directory {
-    cursor: pointer;
-    font-weight: bold;
+.directory.open > .directory-content {
+    display: block;
 }
 
 .directory-content {
@@ -13,6 +17,3 @@ ul {
     margin-left: 20px;
 }
 
-.directory.open > .directory-content {
-    display: block;
-}

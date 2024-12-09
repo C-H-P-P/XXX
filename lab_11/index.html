@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Job Filter</title>
+    <title>Job Filter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Job Filter</h1>
+    <header>
+        <h1>Job Search</h1>
+    </header>
+    <main>
+        <section class="tags">
+            <button onclick="toggleTag('middle')">Middle</button>
+            <button onclick="toggleTag('senior')">Senior</button>
+            <button onclick="toggleTag('frontend')">Frontend</button>
+            <button onclick="toggleTag('backend')">Backend</button>
+        </section>
 
-   
-    <div class="tags">
-        
-        <span onclick="addTag('middle')">middle</span>
-        <span onclick="addTag('senior')">senior</span>
-        <span onclick="addTag('frontend')">frontend</span>
-        <span onclick="addTag('backend')">backend</span>
-    </div>
-
-    <div class="jobs">
-       
-        </div>
-        <div class="job" data-tags="middle backend">
-            <h3>Middle Backend Developer</h3>
-        </div>
-        <div class="job" data-tags="senior fullstack">
-            <h3>Senior Fullstack Developer</h3>
-        </div>
-        
-        </div>
-        <div class="job" data-tags="middle frontend">
-            <h3>Middle Frontend Developer</h3>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+        <section class="jobs">
+            <article class="job" data-tags="middle backend">
+                <h3>Middle Backend Developer</h3>
+                <p>Work with backend technologies to build scalable solutions.</p>
+            </article>
+            <article class="job" data-tags="senior fullstack">
+                <h3>Senior Fullstack Developer</h3>
+                <p>Lead development across both frontend and backend stacks.</p>
+            </article>
+            <article class="job" data-tags="middle frontend">
+                <h3>Middle Frontend Developer</h3>
+                <p>Create engaging user experiences with modern UI frameworks.</p>
+            </article>
+        </section>
+    </main>
+    
 </body>
 </html>

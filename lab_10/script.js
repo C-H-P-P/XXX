@@ -1,4 +1,4 @@
-function showInfo(team) { 
+function showInfo(team, largeImageUrl) { 
     const infoBox = document.getElementById('info-box'); 
     const infoText = document.getElementById('info-text'); 
     console.log(team);
@@ -14,6 +14,9 @@ function showInfo(team) {
 
     infoText.innerHTML = teamInfo[team]; 
     infoBox.style.display = 'block'; 
+    
+    // Перехід на велике зображення
+    window.open(largeImageUrl, '_blank');
 } 
 
 function hideInfo() { 

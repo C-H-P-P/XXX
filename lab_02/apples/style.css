@@ -1,213 +1,234 @@
-.header {
-    background-image: url("apples.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px;
-    width: 1500px;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-    color: white;
-    font-size: 54px;
-    margin-left: 550px;
-    margin-top: 0px;
-    transform: translate(10px, 50px); 
-}
-
-.header-top {
-    margin-top: 300px;
-    padding: 10px;
-}
-
-.nav {
-    margin: 0px;
-    padding: 20px;
-    text-align: end;
-    margin-top: -400px;
-}
-
-.nav li {
-    display: inline;
-    text-align: end;
-    transform: translate(10px, 50px); 
-}
-
-.nav a {
-    padding: 5px 7px 10px 7px;
-    margin: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-}
-
-.paragraph-section {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px;
-}
-
-.paragraph-1 {
-    width: 300px;
-    margin-left: 40px;
-    margin-top: 520px;
-    text-align: justify;
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
     line-height: 1.6;
 }
 
-.paragraph-2 {
-    width: 500px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.6;
-    margin-top: 520px;
-    margin-left: 600px;
+header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
-.body {
-    margin: 0px;
-    padding: 0%;
-    background-color: #bebdbd67;
-}
-
-.main {
-    padding-bottom: 40px;
-    background-color: #dadada;
-    column-gap: 20px;
-    padding: 140px;
-}
-.show-more-btn{
-    margin: 100px;
-    margin-top: 220px;
-   margin-left: 620px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    padding: 8px;
-    border: 1px solid rgb(255, 255, 255);
-
-    background-color:rgba(0, 0, 0, 0.5);
-    color: rgb(206, 206, 206);
-}
-.article {
-    gap: 50px;
-    text-align: center;
+nav {
     display: flex;
-    flex-direction: row;
-    margin: 10px 50px;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.article img {
-    width: 100%;
-    height: auto;
-    position: relative;
+nav .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.like-button {
+nav .menu-items {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu-items li {
+    margin-left: 20px;
+}
+
+nav .menu-items li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+}
+
+.banner {
+    position: relative;
+    height: 70vh;
+    background: url('images/apples.jpg') no-repeat center center/cover;
+}
+
+.banner-content {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 30px;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(206, 206, 206);
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
 }
 
-.article-date {
+.banner-content h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.info-left, .info-right {
+    width: 45%;
+}
+
+.info-left p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info-right p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.main-content {  
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.articles-section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.articles-section h2 {
+    margin-bottom: 30px;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-left .image-box {
+    order: 1;
+}
+
+.article-left .text-box {
+    order: 2;
+}
+
+.article-right .image-box {
+    order: 2;
+}
+
+.article-right .text-box {
+    order: 1;
+}
+
+.image-box {
+    position: relative;
+}
+
+.image-box img {
+    max-width: 300px;
+    height: auto;
+}
+
+.image-caption {
     position: absolute;
     bottom: 10px;
-    left: 610px;
-    z-index: 1;
-    color: #a2a2a2;
-}
-
-.newsletter-form {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 40px;
-    padding: 40px;
-}
-
-.email-input {
-    width: 700px;
-    height: 50px;
-}
-
-.subscribe-btn {
-    width: 100px;
-    height: 56px;
-    text-align: center;
-    padding: 8px;
-    border: 1px solid rgb(255, 255, 255);
+    left: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(206, 206, 206);
+    color: white;
+    padding: 5px;
+    font-size: 14px;
 }
 
-.footer {
-    padding: 0 50px;
-    justify-content: center;
+.image-likes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.text-box {
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.subscribe-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.subscribe-section form {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-section input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+.subscribe-section button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
-.footer-item {
-    padding: 50px;
-    width: 230px;
+.footer-column {
+    flex: 1;
 }
 
-.footer-end {
-    display: flex;
-    flex-direction: row;
-}
-
-.subscribe-btn-footer {
-    width: 100px;
-    height: 30px;
+footer p {
     text-align: center;
-    padding: 8px;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(206, 206, 206);
-}
-
-.email-input-footer {
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    padding: 8px;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(206, 206, 206);
-}
-
-.footer-links {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-.footer-links ul {
-    margin: 10px;
-    padding: 0px;
-    text-align: end;
-}
-
-.footer-links li {
-    display: inline;
-    text-align: end;
-}
-
-.footer-links a {
-    padding: 5px 7px 10px 7px;
-    margin: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+    margin-top: 20px;
 }

@@ -1,182 +1,145 @@
+.header {
+    background-image: url("apples.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 1500px;
+}
 
-/* GENERAL STYLES */
-body {
-    font-family: Arial, sans-serif;
+.logo {
+    color: white;
+    font-size: 54px;
+    margin-left: 550px;
+    margin-top: 0px;
+    transform: translate(10px, 50px); 
+}
+
+.header-top {
+    margin-top: 300px;
+    padding: 10px;
+}
+
+.nav {
     margin: 0px;
-    padding: 100;
-    background-color: #f2f2f2;
-    
-}
-
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.but1{
-    margin: 100px;
-        align-items: center;
-        text-align: center;
-        .biton {
-           width: 300px;
-           height: 100px;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid rgb(255, 255, 255);
-
-            background-color:rgba(0, 0, 0, 0.5);
-            color: rgb(206, 206, 206);
-        }
- }
-
- p{
-    justify-content:center;
-    display: flex;
     padding: 20px;
- }
+    text-align: end;
+    margin-top: -400px;
+}
 
+.nav li {
+    display: inline;
+    text-align: end;
+    transform: translate(10px, 50px); 
+}
 
-
-header {
-    background: url('apples.jpg') no-repeat center center/cover;
+.nav a {
+    padding: 5px 7px 10px 7px;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
     color: white;
-    padding: 100px;
+}
+
+.paragraph-section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+}
+
+.paragraph-1 {
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 520px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.paragraph-2 {
+    width: 500px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 520px;
+    margin-left: 600px;
+}
+
+.body {
+    margin: 0px;
+    padding: 0%;
+    background-color: #bebdbd67;
+}
+
+.main {
+    padding-bottom: 40px;
+    background-color: #dadada;
+    column-gap: 20px;
+    padding: 140px;
+}
+.show-more-btn{
+    margin: 100px;
+    margin-top: 220px;
+   margin-left: 620px;
+    width: 200px;
+    height: 50px;
     text-align: center;
-    top: -100px;
-    
+    padding: 8px;
+    border: 1px solid rgb(255, 255, 255);
 
-    
+    background-color:rgba(0, 0, 0, 0.5);
+    color: rgb(206, 206, 206);
 }
-
-
-
-.header-container {
+.article {
+    gap: 50px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    padding: -50px ;
-    margin: 100px;
-    font-size: 30px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+    flex-direction: row;
+    margin: 10px 50px;
+    align-items: center;
     position: relative;
-    top: -180px;
-    margin-left: -50px;
-    
 }
 
-.dina1{
-    display: flex;
-    justify-content:center;
-    color: rgb(255, 255, 255);
-    margin: 100px;
-    font-size: 50px;
-    text-decoration: none;
-    
-}
-
-nav ul li a {
-    color: white;
-  
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-
-nav li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 1px;
-    
-    
-}
-.span{
+.article img {
+    width: 100%;
+    height: auto;
     position: relative;
-    right: 700px;
-    
-
 }
 
-/* HERO SECTION STYLES */
-.article.bbb{
-    text-align: right;
-}
-
-.left-image {
-    background-image: url(" C:/Users/lensa/Documents/ІЗРАЇЛЬ/CSS/lesson/Нова папка/sample3.jpg");
-    width: 70%;
-   position: relative;
-
-}
-.flex-article {
-   display: flex; 
-}
-.article-content-new {
-    width: 30%;
-}
-
-.likes {
-    position:absolute ;
-    right: 100px;
-}
-.likes2{
-    position:absolute ;
-    right: 780px;
-}
-
-
-.left-image h3 {
+.like-button {
     position: absolute;
-    top: 90%
-}
-.rrr{
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    text-align: center;
-
-}
-.reverce{
-    flex-direction: row-reverse;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(206, 206, 206);
+    z-index: 1;
 }
 
+.article-date {
+    position: absolute;
+    bottom: 10px;
+    left: 610px;
+    z-index: 1;
+    color: #a2a2a2;
+}
 
-
-
-
-
-.form-news {
+.newsletter-form {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 20px;
+    margin: 40px;
     padding: 40px;
-    margin-top: -30px;
-   
 }
 
-.form-news p {
-    font-size: 30px;
-    padding-right: 10px;
-}
-
-.in {
+.email-input {
     width: 700px;
     height: 50px;
 }
 
-label {
-    line-height: 0;
-    height: 50px;
-}
-
-.button2 {
+.subscribe-btn {
     width: 100px;
     height: 56px;
     text-align: center;
@@ -186,54 +149,65 @@ label {
     color: rgb(206, 206, 206);
 }
 
+.footer {
+    padding: 0 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
 
-/* Оновлення стилів для контактів і іконок */
-footer {
-    background-color: #fff;
-    padding: 40px;
+.footer-item {
+    padding: 50px;
+    width: 230px;
+}
+
+.footer-end {
+    display: flex;
+    flex-direction: row;
+}
+
+.subscribe-btn-footer {
+    width: 100px;
+    height: 30px;
     text-align: center;
-}
-
-.contact-info h3,
-.social-icons h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.contact-info p,
-.social-icons p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.social-icons a {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #0073e6;
-}
-
-.product-likes .likes {
-    margin: 20px;
-}
-
-.button-like {
-    padding: 10px;
+    padding: 8px;
+    border: 1px solid rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
+    color: rgb(206, 206, 206);
+}
+
+.email-input-footer {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(206, 206, 206);
+}
+
+.footer-links {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.footer-links ul {
+    margin: 10px;
+    padding: 0px;
+    text-align: end;
+}
+
+.footer-links li {
+    display: inline;
+    text-align: end;
+}
+
+.footer-links a {
+    padding: 5px 7px 10px 7px;
+    margin: 10px;
     font-size: 18px;
-}
-
-.button-like i {
-    margin-right: 5px;
-}
-
-.button-like:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }

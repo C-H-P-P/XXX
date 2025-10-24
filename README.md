@@ -1,4 +1,4 @@
-https://Chupa-pupA.github.io/XXX/lab_01/cars/
+https://C-H-P-P.github.io/XXX/lab_01/cars/
 
 https://Chupa-pupA.github.io/XXX/lab_01/food/
 
